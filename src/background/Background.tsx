@@ -2,9 +2,10 @@ import { ReactNode } from 'react';
 
 import styled from 'styled-components';
 
+import FadeIn from '../animations/fadeIn';
+
 type IBackgroundProps = {
   children: ReactNode;
-  color: string;
 };
 
 const BackgroundBackground = styled.div`
@@ -12,13 +13,13 @@ const BackgroundBackground = styled.div`
   background-image: url('./assets/images/mountain.svg');
   background-repeat: no-repeat;
   background-position: bottom;
-  background-size: contain;
+  background-size: auto;
 `;
 
 const Background = (props: IBackgroundProps) => (
-  <BackgroundBackground className={props.color}>
-    {props.children}
-  </BackgroundBackground>
+  <FadeIn delay={1} repeat={false}>
+    <BackgroundBackground>{props.children}</BackgroundBackground>
+  </FadeIn>
 );
 
 export { Background };
