@@ -1,22 +1,27 @@
 import { ReactNode } from 'react';
 
+import { MouseParallax, ScrollParallax } from 'react-just-parallax';
+
 type ICTABannerProps = {
-  title: string;
-  subtitle: string;
+  title?: string;
+  subtitle?: string;
   button: ReactNode;
 };
 
 const CTABanner = (props: ICTABannerProps) => (
-  <div className="text-center flex flex-col p-4 sm:text-left sm:flex-row sm:items-center sm:justify-between sm:p-12 bg-magenta-100 rounded-md">
-    <div className="text-2xl font-semibold">
-      <div className="text-magenta-900">{props.title}</div>
-      <div className="text-magenta-200">{props.subtitle}</div>
+  <ScrollParallax>
+    <div className="text-center flex flex-col mb-40 p-4 sm:text-left sm:flex-row sm:items-center sm:justify-center sm:p-12 bg-magenta-500 rounded-md">
+      <div className="text-3xl font-semibold">
+        <div className="text-magenta-400 text-center">{props.title}</div>
+        <div className="text-magenta-200 text-center">{props.subtitle}</div>
+      </div>
+      <MouseParallax strength={0.1}>
+        <div className="mt-3 sm:mt-0 sm:ml-2 flex justify-center">
+          {props.button}
+        </div>
+      </MouseParallax>
     </div>
-
-    <div className="whitespace-no-wrap mt-3 sm:mt-0 sm:ml-2">
-      {props.button}
-    </div>
-  </div>
+  </ScrollParallax>
 );
 
 export { CTABanner };

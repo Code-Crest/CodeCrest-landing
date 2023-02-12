@@ -1,8 +1,10 @@
 import className from 'classnames';
+import Link from 'next/link';
 
 type IButtonProps = {
   xl?: boolean;
   children: string;
+  to: string;
 };
 
 const Button = (props: IButtonProps) => {
@@ -15,7 +17,7 @@ const Button = (props: IButtonProps) => {
 
   return (
     <div className={btnClass}>
-      {props.children}
+      <Link href={props.to}>{props.children}</Link>
 
       <style jsx>
         {`
@@ -28,15 +30,15 @@ const Button = (props: IButtonProps) => {
           }
 
           .btn-xl {
-            @apply font-extrabold text-xl py-4 px-6;
+            @apply font-semibold text-3xl py-5 px-20;
           }
 
           .btn-primary {
-            @apply text-white bg-primary-500;
+            @apply text-magenta-600 bg-magenta-300;
           }
 
           .btn-primary:hover {
-            @apply bg-primary-600;
+            @apply bg-magenta-300;
           }
         `}
       </style>

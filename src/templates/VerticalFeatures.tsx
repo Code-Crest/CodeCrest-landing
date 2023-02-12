@@ -12,6 +12,7 @@ const VerticalFeatures = () => (
       image="/assets/images/feature.svg"
       imageAlt="First feature alt text"
     />
+
     <VerticalFeatureRow
       title="Save Money and Time"
       description="With outsourcing, you only pay for the services you need, when you need them. No more worrying about the costs of hiring and training full-time employees. Let us take care of it for you."
@@ -19,8 +20,9 @@ const VerticalFeatures = () => (
       imageAlt="Second feature alt text"
       reverse
     />
+
     <VerticalFeatureRow
-      title="Code Crest"
+      title="Talents in our hands"
       description="Our team of highly skilled professionals come from a variety of industries and backgrounds, bringing a wealth of expertise to your business. Outsource with us to gain access to top talent without the hassle of hiring and training in-house."
       image="/assets/images/feature3.svg"
       imageAlt="Third feature alt text"

@@ -11,8 +11,9 @@ html {
 body {
   font-family: 'DM Mono', monospace;
   background-color: #19040A;
-  color: #FF80A3;
+  color: #FFCCDA;
   overflow-x: hidden;
+  letter-spacing: 4%;
 }
 
 * {
@@ -34,14 +35,13 @@ body {
   }
 }
 
-h1, h2 {
-  font-family: 'Poly', serif;
-  letter-spacing: 4%;
+h1, h2, h3 {
+  font-family: 'Poly', sans-serif;
 }
 
 h1 {
   font-style: italic;
-  font-size: clamp(2rem, 10vw, 5.5rem);
+  font-size: clamp(2rem, 10vw, 6.5rem);
 }
 `;
 

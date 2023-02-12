@@ -1,11 +1,20 @@
 import Link from 'next/link';
 
+import { Button } from '../button/Button';
+import { CTABanner } from '../cta/CTABanner';
 import { CenteredFooter } from '../footer/CenteredFooter';
 import { Section } from '../layout/Section';
 import { Logo } from './Logo';
 
 const Footer = () => (
   <Section>
+    <CTABanner
+      button={
+        <Button to={'#'} xl>
+          Contact Us
+        </Button>
+      }
+    />
     <CenteredFooter
       logo={<Logo />}
       iconList={
